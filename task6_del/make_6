@@ -1,0 +1,9 @@
+all: task_6.o function_6.o
+	gcc task_6.o function_6.o && rm *.o
+
+task_6.o: task_6.c
+	gcc -c task_6.c
+
+function_6.o: function_6.c
+	gcc -c function_6.c
+	
