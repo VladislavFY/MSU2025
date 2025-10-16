@@ -40,7 +40,7 @@ void insertion_sort(double *array, int len){
         double key = array[i];
         int j = i - 1;
         /* последовательный (линейный) поиск позиции: сдвигаем элементы вправо */
-        while (j >= 0 && array[j] > key){
+        while (j >= 0 && ((array[j] - key) > eps)){
             array[j + 1] = array[j];
             --j;
         }
@@ -51,7 +51,7 @@ void insertion_sort(double *array, int len){
 /* Проверка, упорядочен ли массив по неубыванию */
 int is_sorted(const double *array, int len){
     for (int i = 1; i < len; ++i){
-        if (array[i-1] > array[i]) return 0; /* не упорядочен */
+        if ((array[i-1] - array[i]) > eps) return 0; /* не упорядочен */
     }
     return 1; /* упорядочен */
 }
