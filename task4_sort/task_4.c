@@ -8,7 +8,7 @@ double *generate_random_array(int len);
 void insertion_sort(double *array, int len);
 int is_sorted(const double *array, int len);
 void time_sort_and_report(double *array, int len);
-
+void print_string( double *array, int len);
 
 /* main: только открываем файл и вызываем функции */
 int main(void){
