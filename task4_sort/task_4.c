@@ -1,15 +1,4 @@
-#include <stdio.h>
-#include <stdlib.h>
-#include <time.h>
-
-/* Прототипы функций */
-double *make_array(FILE*f, int *len); /* НЕ МЕНЯТЬ эту функцию — используется как есть */
-double *generate_random_array(int len);
-void insertion_sort(double *array, int len);
-int is_sorted(const double *array, int len);
-void time_sort_and_report(double *array, int len);
-void print_string( double *array, int len);
-
+#include <prototypes.h>
 /* main: только открываем файл и вызываем функции */
 int main(void){
     FILE *f = fopen("input_data.txt", "r");
