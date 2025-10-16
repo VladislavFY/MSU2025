@@ -12,8 +12,7 @@ void time_sort_and_report(double *array, int len);
 
 /* main: только открываем файл и вызываем функции */
 int main(void){
-    const char *filename = "input.txt";
-    FILE *f = fopen(filename, "r");
+    FILE *f = fopen("input_data.txt", "r");
     int len = 0;
     double *arr = NULL;
 
@@ -38,7 +37,6 @@ int main(void){
 
     /* Вызов функции, которая сортирует и выводит время/проверку */
     time_sort_and_report(arr, len);
-
     free(arr);
     return 0;
 }
