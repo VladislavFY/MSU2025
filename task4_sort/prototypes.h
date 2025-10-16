@@ -9,7 +9,7 @@
 
 #define N 10.
 
-double *make_array(FILE*f, int *len); /* НЕ МЕНЯТЬ эту функцию — используется как есть */
+double *make_array(FILE*f, int *len); 
 double *generate_random_array(int len);
 void insertion_sort(double *array, int len);
 int is_sorted(const double *array, int len);
